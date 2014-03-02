@@ -150,3 +150,13 @@ The build process for Scribe uses autoconf macros to compile/link with Boost.
 These macros were written by Thomas Porschberg, Michael Tindal, and
 Daniel Casimiro.  See the m4 files in the aclocal subdirectory for more
 information.
+
+
+
+./configure --with-hadooppath=/home/hadoop/hadoop/hadoop  --enable-hdfs
+
+export CPPFLAGS="-I/usr/lib/jvm/java-7-oracle/include -I/usr/lib/jvm/java-7-oracle/include/linux -I/home/hadoop/hadoop/hadoop/include"
+export LDFLAGS="-L/usr/lib/jvm/java-7-oracle/jre/lib/amd64:/usr/lib/jvm/java-7-oracle/jre/lib/amd64/server -L/home/hadoop/hadoop/hadoop/lib/native"
+export LIBS="-lhdfs -ljvm"
+export LD_LIBRARY_PATH="/usr/lib/jvm/java-7-oracle/jre/lib/amd64:/usr/lib/jvm/java-7-oracle/jre/lib/amd64/server:/home/hadoop/hadoop/hadoop/lib/native"
+
